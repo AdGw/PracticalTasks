@@ -21,7 +21,7 @@ solution("world");
 //////////////////
 //Nested method//
 
-function reverseString(str) {
+let solution = str => {
     return str.split("").reverse().join("");
 }
-reverseString("world");
+solution("world");
