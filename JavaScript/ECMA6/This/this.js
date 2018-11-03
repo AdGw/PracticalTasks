@@ -35,7 +35,7 @@ let bound = fetchData.bind(article);
 bound();
 
 class Article{
-	contructor(title){
+	constructor(title){
 		this.title = title
 	}
 	getTitle(){
