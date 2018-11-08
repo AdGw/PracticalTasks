@@ -1,9 +1,9 @@
-class Media{
-	constructor(type, name){
+class Media {
+	constructor(type, name) {
 		this.type = type;
 		this.name = name;
 	}
-	getFullName(){
+	getFullName() {
 		return `${this.type} (${this.name})`
 	}
 }
