@@ -7,8 +7,6 @@ void setup() {
 
 void draw() {
   background(0);
-
-
   int total = 10;
   int count = 0;
   int attempts = 0;
@@ -26,7 +24,6 @@ void draw() {
       break;
     } 
   }
-
 
   for (Circle c : circles) {
     if (c.growing) {
