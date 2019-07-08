@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <fcntl.h>  // for open
+#include <unistd.h> // for close
 #include <sys/types.h>
 #include <winsock2.h>
 #include <windows.h>
-int newtwork_socket;
 int main()
 {
+  int newtwork_socket;
   //create the socket
   newtwork_socket = socket(AF_INET, SOCK_STREAM, 0);
   // specify an address for the socket
@@ -21,16 +22,12 @@ int main()
   {
     printf("Connection Error");
   }
-  else
-  {
-    printf("ok");
-  }
   //recieve data from the server
   char server_response[256];
-  recv(newtwork_socket, &server_response, sizeof(server_response), 0);
+  recv(newtwork_socket, server_response, sizeof(server_response), 0);
   // print out the server response
-  printf("The server sent the data: %s\n", server_response);
+  //printf("The server sent the data: %s\n", server_response);
   // close the socket
-  close(newtwork_socket);
+  //close(newtwork_socket);
   return 0;
 }
